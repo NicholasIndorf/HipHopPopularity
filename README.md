@@ -30,7 +30,7 @@ quantify. Thus, if neural networks are typically used with audio data that is re
 doesn't work out to make a useful tool in the end.
 
 I had faith though. A properly trained neural network is a powerful thing, and if it didn't work out in the end, I might have answered a different but similarly 
-interesting question about the limits of data science.
+interesting question about the limits of data science in audio neural networks.
 
 ## Business Problem
 I sought to build a model that could predict whether a given previously unreleased hip hop track would be popular, based purely on the music itself.
