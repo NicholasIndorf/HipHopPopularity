@@ -38,6 +38,7 @@ This model would be an extremely useful tool for my cousin, who is an artist on 
 
 ## Data Gathering
 I gathered data from the Spotify API, not only because it is the platform we are seeking to optimize on, but also because it is an extremely comprehensive database.
+**LINK**
 
 ## Data Understanding
 This data represented 16168 tracks released 2019-2021, and included popularity scores (0-100, 100 being most popular) and 
