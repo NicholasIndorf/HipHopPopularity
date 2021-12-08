@@ -59,4 +59,12 @@ to make predictions according to the underlying distribution of the training dat
 Evaluation was done using accuracy and ROC-AUC scores. Of paramount importance is the model's ability to separate popular and not popular. A false positive 
 means that 
 and for this task
-ROC-AUC is best equipped. 
+ROC-AUC is best equipped.
+
+## Conclusion
+
+## Author
+
+## Presentation
+
+## Directory
