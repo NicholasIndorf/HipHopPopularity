@@ -91,56 +91,31 @@ requirements.txt lists all the packages necessary to run this project locally.
 
 ## Directory
 ├── images/                <- A smattering of relevant images
-
 ├── notebooks/             <- Jupyter notebooks used in development
-
 ├── HipHopPopularity.ipynb <- The main notebook of the project. Goes through everything in detail
-
 ├── Presentation.pdf       <- pdf of the presentation I gave for this project. Google Slides link above
-
 ├── README.md              <- Top-level README for anyone interested in this project
-
 ├── requirements.txt       <- The requirements file for reproducing the analysis environment
 
-After running the data gathering/processing scripts, your local repo will include:
-
+After running the data gathering/processing scripts, your local repo will also include:
 └── data
-
-   ├── collection_1/      <- Raw song csv data collected from Spotify via script in the main notebook
-    
-   ├── X_train/           <- X_train split data - via mp3 collection / wav transformation scripts
-    
-   │   ├── mp3/           <- mp3 preview audio files
-    
-   │   └── wav/           <- wav preview audio files
-    
-   ├── X_test/            <- X_test split data - via mp3 collection / wav transformation scripts
-   
-   │   ├── mp3/           <- mp3 preview audio files
-    
-   │   └── wav/           <- wav preview audio files
-    
-   ├── X_holdout/         <- X_holdout split data - via mp3 collection / wav transformation scripts
-    
-   │   ├── mp3/           <- mp3 preview audio files
-    
-   │   └── wav/           <- wav preview audio files
-    
-   ├── collection_1_mp3s.csv <- Processed song csv data
-    
-   ├── mel_spec_dict.pkl  <- Dictionary of unscaled mel spectrograms and target labels for all data splits
-    
-   └── mel_spec_sc.pkl    <- Dictionary of scaled mel spectrograms and target labels for all data splits
+    ├── collection_1/      <- Raw song csv data collected from Spotify via script in the main notebook
+    ├── X_train/           <- X_train split data - via mp3 collection / wav transformation scripts    
+    │   ├── mp3/           <- mp3 preview audio files    
+    │   └── wav/           <- wav preview audio files    
+    ├── X_test/            <- X_test split data - via mp3 collection / wav transformation scripts   
+    │   ├── mp3/           <- mp3 preview audio files    
+    │   └── wav/           <- wav preview audio files    
+    ├── X_holdout/         <- X_holdout split data - via mp3 collection / wav transformation scripts  
+    │   ├── mp3/           <- mp3 preview audio files   
+    │   └── wav/           <- wav preview audio files  
+    ├── collection_1_mp3s.csv <- Processed song csv data   
+    ├── mel_spec_dict.pkl  <- Dictionary of unscaled mel spectrograms and target labels for all data splits    
+    └── mel_spec_sc.pkl    <- Dictionary of scaled mel spectrograms and target labels for all data splits
 
 [Google Colab directory:](https://drive.google.com/drive/folders/1W1u_lJYBIv4HcS1lnXK6szcel98ZYZ6q?usp=sharing)
-
 ├── mlp_dict.pkl           <- Multilayer perceptron info dictionary - includes keras Sequential & History objects
-
 ├── cnn1_dict.pkl          <- Convolutional Neural Network (1st) info dictionary - includes keras Sequential & History objects
-
 ├── cnn2_dict.pkl          <- Convolutional Neural Network (2nd) info dictionary - includes keras Sequential & History objects
-
 ├── rnn_dict.pkl           <- Recurrent Neural Network info dictionary - includes keras Sequential & History objects
-
 └── mel_spec_sc.pkl        <- Dictionary of scaled mel spectrograms and target labels for all data splits
-
