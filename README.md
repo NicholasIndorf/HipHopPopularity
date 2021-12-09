@@ -1,7 +1,7 @@
 # HipHopPopularity
 ![KCMakesMusic](images/KCMakesMusic.png)
 
-##Summary
+## Summary
 In this project, I sought to build a tool that could help my cousin, a hip hop artist, to assess whether songs he hasn't released yet had potential to be popular. 
 I gathered and used only audio preview samples and associated popularity scores of recently released hip-hop tracks from Spotify. These were processed into 
 spectrograms and a binary target (popular/not popular). These were fed into a neural network, which was iteratively constructed with increasing complexity. The 
@@ -79,9 +79,12 @@ Furthermore, I will use a tool like LIME to take a look under the hood to see wh
 
 ## Author
 Nicholas Indorf
+
 email: nicholasindorf@gmail.com
-linkedin: linkedin.com/nicholas-indorf-data-science
-github: github.com/Nindorph
+
+linkedin: [linkedin.com/nicholas-indorf-data-science](linkedin.com/nicholas-indorf-data-science)
+
+github: [github.com/Nindorph](github.com/Nindorph)
 
 ## Presentation
 [Google Slides Presentation](https://docs.google.com/presentation/d/1OwtORdCqgpgshPoeff4esrDakuBMAAOAC2J39BxBg4A/edit?usp=sharing)
