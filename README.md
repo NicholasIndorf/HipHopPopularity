@@ -35,13 +35,13 @@ He could use this tool to bounce his music off of to get a feeling for its popul
 ## Data Gathering
 I gathered data from the [Spotify API](https://developer.spotify.com/documentation/web-api/), not only because it is the platform we are seeking to optimize on, 
 but also because it is an extremely comprehensive database. I used the [Spotipy python package](https://spotipy.readthedocs.io/en/2.19.0/#) to access the API. For 
-more information on how I gathered the data, please look at my data gathering section in HipHopPopularity.ipynb, and in particular the custom function `get_tracks` 
+more information on how I gathered the data, please look at my data gathering section in the main notebook, and in particular the custom function `get_tracks` 
 in the glossary.
 
 ## Data Understanding
 This data represented 16168 tracks released 2019-2021, and included popularity scores (0-100, 100 being most popular) and 
 http links for ~30 second preview mp3s. The data was not as complete as it could have been (some well-known artists were not fully represented), but it was
-still quite extensive and representative of the hip hop landscape for those years. Much more exploratory information in HipHopPopularity.ipynb.
+still quite extensive and representative of the hip hop landscape for those years. Much more exploratory information in the main notebook.
 
 ## Data Processing
 Mp3s were gathered from these links and transformed into mel spectrograms. Mel spectrograms are a well-known tool to represent audio data in a visual format. 
@@ -51,9 +51,10 @@ by a model.
 The associated target popularity for each preview mp3 was binned into popular and not popular. Using the training data, I determined popular to be >= 39.
 
 ## Modeling
-Several models were attempted when attacking this problem. First, to get a sense for what a useless/untrained model would perform like, I used a dummy classifier
-to make predictions according to the majority class of the training data. This simulates a completely untrained model. I then iterated through a simple multilayer 
-perceptron, two builds of a Convolutional Neural Network, and finally a Recurrent Neural Network which has a Convolutional component at the start.
+Several models were attempted when attacking this problem, increasing in complexity. First, to get a sense for what a useless/untrained model would perform like, I 
+used a dummy classifier to make predictions according to the majority class of the training data. This simulates a completely untrained model. I then iterated 
+through a simple multilayer perceptron, two builds of a Convolutional Neural Network, and finally a Recurrent Neural Network which has a Convolutional component at 
+the start.
 
 ### Google Colab
 The modeling section of this project was performed in Google Colab, as my computer couldn't handle it. Your mileage may vary. I noted in my notebook what 
@@ -62,15 +63,15 @@ cells are for Colab.
 
 ## Evaluation
 Evaluation was done using accuracy and ROC-AUC scores. Of paramount importance is the model's ability to separate popular and not popular. Either way it
-false categorizes a song means wasted effort so minimizing both was prioritized.
+falsely categorizes a song means wasted effort so minimizing both was prioritized.
 
 Overall the Recurrent Neural Network worked the best, and seemed to pick up on some underlying patterns. It didn't work amazingly well, but +9.1% more accurate 
-and +0.146 ROC-AUC means that this idea has real potential.
+and +0.146 ROC-AUC means that this idea has real potential. Please read the notebook for a more in-depth analysis.
 
 ## Conclusion
-Even though the model only learned a little bit, it still has some potential for use. Instead of being used on the individual song level, it could be used with
-a collection of tracks as a first-pass seive to point out a sub-group of standout songs. My client runs a recording studio and knows many fellow artists so
-this still can be a useful tool.
+Even though the model only learned a little bit, it still has great potential and some utility. Instead of being used on the individual song level, it could be 
+used with a collection of tracks as a first-pass seive to point out a sub-group of standout songs. My client runs a recording studio and knows many fellow artists 
+so this still can be a useful tool.
 
 ## Next Steps
 Moving forward, I will be looking into incorporating non-audio features, different audio features, different neural architectures, and more input tracks.
@@ -89,47 +90,33 @@ github: github.com/Nindorph
 requirements.txt lists all the packages necessary to run this project locally.
 
 ## Directory
-├── LICENSE
-├── Makefile           <- Makefile with commands like `make data` or `make train`
-├── README.md          <- The top-level README for developers using this project.
-├── data
-│   ├── external       <- Data from third party sources.
-│   ├── interim        <- Intermediate data that has been transformed.
-│   ├── processed      <- The final, canonical data sets for modeling.
-│   └── raw            <- The original, immutable data dump.
-│
-├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-│
-├── models             <- Trained and serialized models, model predictions, or model summaries
-│
-├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`.
-│
-├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-│
-├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-│   └── figures        <- Generated graphics and figures to be used in reporting
-│
-├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-│                         generated with `pip freeze > requirements.txt`
-│
-├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-├── src                <- Source code for use in this project.
-│   ├── __init__.py    <- Makes src a Python module
-│   │
-│   ├── data           <- Scripts to download or generate data
-│   │   └── make_dataset.py
-│   │
-│   ├── features       <- Scripts to turn raw data into features for modeling
-│   │   └── build_features.py
-│   │
-│   ├── models         <- Scripts to train models and then use trained models to make
-│   │   │                 predictions
-│   │   ├── predict_model.py
-│   │   └── train_model.py
-│   │
-│   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-│       └── visualize.py
-│
-└── tox.ini            <- tox file
+├── images/                <- A smattering of relevant images
+├── notebooks/             <- Jupyter notebooks used in development
+├── HipHopPopularity.ipynb <- The main notebook of the project. Goes through everything in detail
+├── Presentation.pdf       <- pdf of the presentation I gave for this project. Google Slides link above
+├── README.md              <- Top-level README for anyone interested in this project
+├── requirements.txt       <- The requirements file for reproducing the analysis environment
+
+After running the data gathering/processing scripts, your local repo will include:
+└── data
+    ├── collection_1/      <- Raw song csv data collected from Spotify via script in the main notebook
+    ├── X_train/           <- X_train split data - via mp3 collection / wav transformation scripts
+    │   ├── mp3/           <- mp3 preview audio files
+    │   └── wav/           <- wav preview audio files
+    ├── X_test/            <- X_test split data - via mp3 collection / wav transformation scripts
+    │   ├── mp3/           <- mp3 preview audio files
+    │   └── wav/           <- wav preview audio files
+    ├── X_holdout/         <- X_holdout split data - via mp3 collection / wav transformation scripts
+    │   ├── mp3/           <- mp3 preview audio files
+    │   └── wav/           <- wav preview audio files
+    ├── collection_1_mp3s.csv <- Processed song csv data
+    ├── mel_spec_dict.pkl  <- Dictionary of unscaled mel spectrograms and target labels for all data splits
+    └── mel_spec_sc.pkl    <- Dictionary of scaled mel spectrograms and target labels for all data splits
+
+[Google Colab directory:](https://drive.google.com/drive/folders/1W1u_lJYBIv4HcS1lnXK6szcel98ZYZ6q?usp=sharing)
+├── mlp_dict.pkl           <- Multilayer perceptron info dictionary - includes keras Sequential & History objects
+├── cnn1_dict.pkl          <- Convolutional Neural Network (1st) info dictionary - includes keras Sequential & History objects
+├── cnn2_dict.pkl          <- Convolutional Neural Network (2nd) info dictionary - includes keras Sequential & History objects
+├── rnn_dict.pkl           <- Recurrent Neural Network info dictionary - includes keras Sequential & History objects
+└── mel_spec_sc.pkl        <- Dictionary of scaled mel spectrograms and target labels for all data splits
+
