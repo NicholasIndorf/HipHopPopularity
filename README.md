@@ -106,31 +106,31 @@ After running the data gathering/processing scripts, your local repo will includ
 
 └── data
 
-    ├── collection_1/      <- Raw song csv data collected from Spotify via script in the main notebook
+   ├── collection_1/      <- Raw song csv data collected from Spotify via script in the main notebook
     
-    ├── X_train/           <- X_train split data - via mp3 collection / wav transformation scripts
+   ├── X_train/           <- X_train split data - via mp3 collection / wav transformation scripts
     
-    │   ├── mp3/           <- mp3 preview audio files
+   │   ├── mp3/           <- mp3 preview audio files
     
-    │   └── wav/           <- wav preview audio files
+   │   └── wav/           <- wav preview audio files
     
-    ├── X_test/            <- X_test split data - via mp3 collection / wav transformation scripts
+   ├── X_test/            <- X_test split data - via mp3 collection / wav transformation scripts
+   
+   │   ├── mp3/           <- mp3 preview audio files
     
-    │   ├── mp3/           <- mp3 preview audio files
+   │   └── wav/           <- wav preview audio files
     
-    │   └── wav/           <- wav preview audio files
+   ├── X_holdout/         <- X_holdout split data - via mp3 collection / wav transformation scripts
     
-    ├── X_holdout/         <- X_holdout split data - via mp3 collection / wav transformation scripts
+   │   ├── mp3/           <- mp3 preview audio files
     
-    │   ├── mp3/           <- mp3 preview audio files
+   │   └── wav/           <- wav preview audio files
     
-    │   └── wav/           <- wav preview audio files
+   ├── collection_1_mp3s.csv <- Processed song csv data
     
-    ├── collection_1_mp3s.csv <- Processed song csv data
+   ├── mel_spec_dict.pkl  <- Dictionary of unscaled mel spectrograms and target labels for all data splits
     
-    ├── mel_spec_dict.pkl  <- Dictionary of unscaled mel spectrograms and target labels for all data splits
-    
-    └── mel_spec_sc.pkl    <- Dictionary of scaled mel spectrograms and target labels for all data splits
+   └── mel_spec_sc.pkl    <- Dictionary of scaled mel spectrograms and target labels for all data splits
 
 [Google Colab directory:](https://drive.google.com/drive/folders/1W1u_lJYBIv4HcS1lnXK6szcel98ZYZ6q?usp=sharing)
 
