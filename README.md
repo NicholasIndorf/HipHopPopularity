@@ -1,5 +1,5 @@
 # HipHopPopularity
-![KCMakesMusic]('images/KCMakesMusic.png')
+![KCMakesMusic](images/KCMakesMusic.png)
 
 ## Context
 Audio classification is a classic use case for neural network models. In a previous project, for example, we built a classifier to distinguish between music genres 
