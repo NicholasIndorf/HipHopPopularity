@@ -1,4 +1,5 @@
 # HipHopPopularity
+![KCMakesMusic](images/KCMakesMusic.png)
 
 ## Context
 Audio classification is a classic use case for neural network models. In a previous project, for example, we built a classifier to distinguish between music genres 
@@ -65,7 +66,13 @@ ROC-AUC is best equipped.
 ## Conclusion
 
 ## Author
+Nicholas Indorf
+email:
+linkedin: 
+github:
 
 ## Presentation
+
+## Reproducibility
 
 ## Directory
