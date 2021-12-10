@@ -93,7 +93,7 @@ github: [github.com/Nindorph](github.com/Nindorph)
 requirements.txt lists all the packages necessary to run this project locally.
 
 ## Directory
-```bash
+```
 ├── images/                <- A smattering of relevant images
 ├── notebooks/             <- Jupyter notebooks used in development
 ├── HipHopPopularity.ipynb <- The main notebook of the project. Goes through everything in detail
