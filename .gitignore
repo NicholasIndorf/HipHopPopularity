@@ -1,6 +1,9 @@
 # Data files
 data/
 
+# blog post
+HipHopPopularityBlog.ipynb
+
 # For macs
 .DS_store
 
