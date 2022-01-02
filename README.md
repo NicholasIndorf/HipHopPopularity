@@ -93,6 +93,7 @@ github: [github.com/Nindorph](github.com/Nindorph)
 requirements.txt lists all the packages necessary to run this project locally.
 
 ## Directory
+```
 ├── images/                <- A smattering of relevant images
 ├── notebooks/             <- Jupyter notebooks used in development
 ├── HipHopPopularity.ipynb <- The main notebook of the project. Goes through everything in detail
@@ -122,3 +123,4 @@ After running the data gathering/processing scripts, your local repo will also i
 ├── cnn2_dict.pkl          <- Convolutional Neural Network (2nd) info dictionary - includes keras Sequential & History objects
 ├── rnn_dict.pkl           <- Recurrent Neural Network info dictionary - includes keras Sequential & History objects
 └── mel_spec_sc.pkl        <- Dictionary of scaled mel spectrograms and target labels for all data splits
+```
