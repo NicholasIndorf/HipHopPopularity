@@ -82,9 +82,9 @@ Nicholas Indorf
 
 email: nicholasindorf@gmail.com
 
-linkedin: [linkedin.com/nicholas-indorf-data-science](linkedin.com/nicholas-indorf-data-science)
+linkedin: [linkedin.com/nicholas-indorf-data](linkedin.com/nicholas-indorf-data)
 
-github: [github.com/Nindorph](github.com/Nindorph)
+github: [github.com/NicholasIndorf](github.com/NicholasIndorf)
 
 ## Presentation
 [Google Slides Presentation](https://docs.google.com/presentation/d/1OwtORdCqgpgshPoeff4esrDakuBMAAOAC2J39BxBg4A/edit?usp=sharing)
